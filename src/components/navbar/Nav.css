@@ -12,11 +12,16 @@ nav{
     margin-top: 20px;
     font-size: 2em;
 }
+nav h2{
+    background-color: #14213d;
+}
 .navList{
+    background-color: #14213d;
     list-style: none;
     display: flex;
     font-size: 1em;
 }
 li{
+    background-color: #14213d;
     padding-right: 30px;
 }

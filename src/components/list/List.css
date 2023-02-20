@@ -1,10 +1,21 @@
 .albumList{
+    list-style: none;
     margin-top: 2em;
     text-align: center;
+    border: 2px solid white;
+    border-radius: 0.5em;
+    margin: 20px 400px 0 400px;
 }
 .albumList li{
+    background-color: #232B2B;
     margin-top: 1em;
     font-size: 2em;
-    border: 2px solid black;
-    border-radius: 0.3em;
+}
+.albumList :nth-child(3){
+    margin-bottom: 1em;
+}
+@media only screen and (max-width: 1800px){
+    .albumList{
+        margin: 20px 100px 0 100px;
+    }
 }
