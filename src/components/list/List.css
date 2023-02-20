@@ -1,0 +1,10 @@
+.albumList{
+    margin-top: 2em;
+    text-align: center;
+}
+.albumList li{
+    margin-top: 1em;
+    font-size: 2em;
+    border: 2px solid black;
+    border-radius: 0.3em;
+}
