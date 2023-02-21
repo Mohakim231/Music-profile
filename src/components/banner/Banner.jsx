@@ -3,6 +3,10 @@ import { Albums } from '../albums/albums'
 import './Banner.css'
 
 function Banner() {
+  const handleClick = (e) => {
+    e.preventDefault();
+    
+  }
   {Albums[Math.floor(Math.random()*Albums.length)]}
   return (
     <>
@@ -12,7 +16,11 @@ function Banner() {
       <h2 className='randomTitle'>random name</h2>
       <p className='randomDate'>random date</p>
       <img id='randomImage' src='https://th.bing.com/th/id/OIP.uoN8hRe660Gd8Le0F2pSpQHaHa?w=183&h=183&c=7&r=0&o=5&pid=1.7'/>
-      <button id='randomButton' type='submit'>Randomise</button>
+      <button 
+        id='randomButton' 
+        type='submit'
+        onClick={handleClick}
+      >Randomise</button>
     </div>
     </>
   )
