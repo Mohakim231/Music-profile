@@ -1,7 +1,9 @@
 import React from 'react'
+import { Albums } from '../albums/albums'
 import './Banner.css'
 
 function Banner() {
+  {Albums[Math.floor(Math.random()*Albums.length)]}
   return (
     <>
     <img id='bannerimg' src='https://th.bing.com/th/id/OIP.C8m6gQaFFp5_hZYfeZIUPAHaDt?w=340&h=175&c=7&r=0&o=5&pid=1.7' alt='singer image'/>
