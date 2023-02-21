@@ -1,8 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './List.css';
 import { Albums } from '../albums/albums';
 
 function List() {
+  const [title, newTitle] = useState('');
+  // const [date, newDate] = useState('');
+  const [data, setData] = useState('');
+  const handleTitle = (e) => {
+    newTitle(e.target.value)
+  };
+  // const handleDate = (e) => {
+  //   newDate(e.target.value)
+  // };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setData(title);
+    Albums.push(data);
+  }
   return (
     <div className='list'>
     <ul className='albumList'>
@@ -16,10 +30,11 @@ function List() {
         )
       })} 
     </ul>
-    <form>
-      <input type="text" name='title' placeholder='Title..'/><br></br>
+    <form
+      onSubmit={handleSubmit}
+    >
+      <input type="text" name='title' placeholder='Title..' onChange={handleTitle}/><br></br>
       <input type="text" name='date' placeholder='Date..'/><br></br>
-      <textarea type="text" name='description' placeholder='Description..'></textarea><br></br>
       <button type='submit'>Submit...</button>
     </form>
     </div>
